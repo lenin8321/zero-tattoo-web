@@ -1,0 +1,1254 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* ==========================================================================
+   ESTILOS VISUALES EDITORIALES — ZERO TATTOO COLOMBIA (styles.css)
+   Inspirado en la carpeta Referentes/:
+   1. banner principal.jpg (UROKI: Hero tipográfico gigante + esquinas editoriales)
+   2. tipofrafia.jpg (BLACK LEDGER: Condensada ultra-bold + tarjetas escalonadas + mono metadata)
+   3. acerca de nosotros.jpg (ABOUT US: 3 tarjetas con central en Glassmorphism y laterales blancas)
+   4. galeria de fotos.jpg (EMPIRE: Títulos gigantes en bajo contraste + Mosaico Bento asimétrico)
+   5. estructura.jpg (KHARKIV: Numeración /01-/06 + títulos escalonados + cajas comparativas ROJO/BLANCO)
+   ========================================================================== */
+
+:root {
+  --bg-black: #050506;
+  --bg-elevated: #0c0c0e;
+  --bg-card: #121215;
+  --text-white: #f7f7f7;
+  --text-gray: #9a9a9e;
+  --text-Watermark: #16161a;
+  --accent-red: #e63926;
+  --accent-emerald: #10b981;
+  --border-line: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.32);
+  --font-display: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'Oswald', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', monospace;
+  --transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-black);
+  color: var(--text-white);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   TIPOGRAFÍA IBM PLEX MONO (Párrafos, Listas, Botones y Descripciones)
+   Especificaciones: Fuente 'IBM Plex Mono', letter-spacing: 0.00em, line-height: 1.5
+   ========================================================================== */
+p,
+ul,
+ol,
+li,
+button,
+.btn-square-white,
+.btn-square-outline,
+.lang-btn,
+.filter-btn,
+.empire-pill-solid,
+.empire-pill-outline,
+.whatsapp-float,
+.hero-center-desc,
+.editorial-lead,
+.staggered-card p,
+.about-card-white p,
+.about-card-glass p,
+.piercing-checklist,
+.piercing-checklist li,
+.review-text,
+.payment-card p,
+.client-card p,
+.video-caption,
+.description,
+.desc {
+  font-family: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', monospace !important;
+  letter-spacing: 0.00em !important;
+  line-height: 1.5 !important;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 92%;
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   1. NAVBAR MINIMALISTA (Transparencia 70%, Desenfoque y Textos a 10px)
+   ========================================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(5, 5, 6, 0.70);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-line);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 20px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 42px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.00em !important;
+  line-height: 1.5 !important;
+  color: var(--text-gray);
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--text-white);
+  border-bottom-color: var(--text-white);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--border-strong);
+  background: #0a0a0c;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-gray);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px !important;
+  font-weight: 700;
+  letter-spacing: 0.00em !important;
+  line-height: 1.5 !important;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-btn.active {
+  background: var(--text-white);
+  color: var(--bg-black);
+}
+
+#navCtaWhatsapp.btn-square-white {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px !important;
+  font-weight: 700;
+  letter-spacing: 0.00em !important;
+  line-height: 1.5 !important;
+  padding: 8px 16px;
+  justify-content: center;
+}
+
+.btn-square-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--text-white);
+  color: var(--bg-black);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.00em;
+  line-height: 1.5;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 11px 18px;
+  border: 1px solid var(--text-white);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-square-white:hover {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+  color: var(--text-white);
+}
+
+.btn-square-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: transparent;
+  color: var(--text-white);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.00em;
+  line-height: 1.5;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 11px 18px;
+  border: 1px solid var(--border-strong);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-square-outline:hover {
+  border-color: var(--text-white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border-line);
+  color: var(--text-white);
+  padding: 8px 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   2. HERO MONUMENTAL CON TEXTO CENTRADO (banner_principal.jpg sin transparencias)
+   ========================================================================== */
+.hero-editorial {
+  position: relative;
+  min-height: 88vh;
+  padding-top: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-line);
+  overflow: hidden;
+  background: url('img/banner_principal.jpg') center/cover no-repeat;
+}
+
+.hero-center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-center-content {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-giant-title-center {
+  font-family: var(--font-display);
+  font-size: clamp(4.2rem, 13vw, 10.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 0.90;
+  color: var(--text-white);
+  margin-bottom: 20px;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.95), 0 2px 10px #000000;
+}
+
+.hero-center-subtitle {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(0.78rem, 1.8vw, 0.98rem);
+  font-weight: 700;
+  letter-spacing: 0.00em !important;
+  line-height: 1.5 !important;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 32px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 1px 6px #000000;
+}
+
+.hero-center-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   3. CABECERAS DE SECCIÓN EDITORIALES (Referentes: estructura.jpg & tipofrafia.jpg)
+   ========================================================================== */
+.section-editorial {
+  position: relative;
+  padding: 96px 0;
+  border-bottom: 1px solid var(--border-line);
+}
+
+.section-meta-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-line);
+  padding-bottom: 12px;
+  margin-bottom: 42px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-gray);
+}
+
+.section-num {
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+/* Título gigante en bajo contraste (Referente: galeria de fotos.jpg SERVICES / PORTFOLIO) */
+.watermark-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.8rem, 11vw, 10rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 0.85;
+  color: var(--text-Watermark);
+  user-select: none;
+  margin-bottom: -24px;
+}
+
+.editorial-split-head {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 36px;
+  align-items: end;
+  margin-bottom: 54px;
+}
+
+.display-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5.6vw, 4.8rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.93;
+  letter-spacing: -0.01em;
+  color: var(--text-white);
+}
+
+.display-heading .indent-line {
+  display: block;
+  padding-left: clamp(24px, 6vw, 90px);
+  color: #ffffff;
+}
+
+.editorial-lead {
+  color: var(--text-gray);
+  font-size: 0.96rem;
+  max-width: 440px;
+  justify-self: end;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.00em;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   4. SERVICIOS EN GRILLA ESCALONADA DE 4 COLUMNAS (Referente: tipofrafia.jpg & galeria de fotos.jpg)
+   ========================================================================== */
+.staggered-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.staggered-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Columnas 2 y 4 desplazadas hacia abajo como en tipofrafia.jpg (FOUR HANDS. ONE STANDARD.) */
+.staggered-card:nth-child(even) {
+  margin-top: 38px;
+}
+
+.staggered-card-img {
+  height: 330px;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: var(--bg-card);
+}
+
+.staggered-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.staggered-card:hover .staggered-card-img img {
+  transform: scale(1.06);
+}
+
+.staggered-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.staggered-card-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-gray);
+  margin-bottom: 10px;
+}
+
+.staggered-card p {
+  font-size: 0.88rem;
+  color: var(--text-gray);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-line);
+  margin-bottom: 10px;
+}
+
+.staggered-card-foot {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-white);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   5. PORTAFOLIO BENTO ASIMÉTRICO (Referente: galeria de fotos.jpg PORTFOLIO)
+   ========================================================================== */
+.filter-bar-editorial {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 34px;
+}
+
+.filter-btn {
+  background: transparent;
+  color: var(--text-gray);
+  border: 1px solid var(--border-line);
+  padding: 9px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.00em;
+  line-height: 1.5;
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--text-white);
+  color: var(--bg-black);
+  border-color: var(--text-white);
+}
+
+/* Mosaico Bento de 4 columnas donde los ítems 1 y 6 ocupan 2 columnas (anchos) */
+.bento-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 320px;
+  gap: 18px;
+}
+
+.portfolio-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-line);
+  cursor: pointer;
+}
+
+/* Patrón asimétrico exacto de galeria de fotos.jpg:
+   Fila 1: Ancha (2 col) + Vertical (1 col) + Vertical (1 col)
+   Fila 2: Vertical (1 col) + Vertical (1 col) + Ancha (2 col) */
+.portfolio-item:nth-child(6n + 1),
+.portfolio-item:nth-child(6n + 6) {
+  grid-column: span 2;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5, 5, 6, 0.9) 0%, rgba(5, 5, 6, 0.15) 55%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.portfolio-style {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-red);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.portfolio-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
+/* ==========================================================================
+   6. ACERCA DE NOSOTROS — 3 TARJETAS (Referente: acerca de nosotros.jpg ABOUT US)
+   ========================================================================== */
+.about-showcase {
+  position: relative;
+  text-align: center;
+}
+
+.about-title-block {
+  margin-bottom: 44px;
+}
+
+.about-title-block h2 {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.about-title-block p {
+  color: var(--text-gray);
+  font-size: 1.05rem;
+  margin-top: 4px;
+}
+
+.about-trio-cards {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  align-items: center;
+  gap: 0;
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-card-white {
+  background: #ffffff;
+  color: #09090b;
+  padding: 40px 34px;
+  border-radius: 18px;
+  text-align: left;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.about-card-white h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #09090b;
+}
+
+.about-card-white p {
+  font-size: 0.94rem;
+  color: #3f3f46;
+  line-height: 1.5;
+  letter-spacing: 0.00em;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.about-card-glass {
+  background:
+    linear-gradient(180deg, rgba(22, 22, 26, 0.78) 0%, rgba(10, 10, 14, 0.92) 100%),
+    url('img/studio-shadows.png') center/cover no-repeat;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 22px;
+  padding: 52px 38px;
+  min-height: 390px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  margin: 0 -14px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85);
+}
+
+.about-card-glass h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.about-card-glass p {
+  font-size: 0.96rem;
+  color: #d4d4d8;
+  line-height: 1.5;
+  letter-spacing: 0.00em;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.about-card-glass-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  padding-left: 14px;
+  margin-top: 28px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   7. BODY PIERCING & JOYERÍA CON ESMERALDAS
+   ========================================================================== */
+.piercing-editorial-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.piercing-frame {
+  position: relative;
+  border: 1px solid var(--border-strong);
+  padding: 12px;
+  background: #0a0a0d;
+}
+
+.piercing-frame img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.piercing-tag-emerald {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-emerald);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 6px 12px;
+  margin-bottom: 16px;
+}
+
+.piercing-checklist {
+  list-style: none;
+  margin: 24px 0 32px;
+  border-top: 1px solid var(--border-line);
+}
+
+.piercing-checklist li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-line);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #e4e4e7;
+  display: flex;
+  justify-content: space-between;
+}
+
+.piercing-checklist li::after {
+  content: "↗";
+  color: var(--accent-emerald);
+}
+
+/* ==========================================================================
+   8. SEDES Y WALK-INS EN CAJAS COMPARATIVAS (Referente: estructura.jpg /02)
+   ========================================================================== */
+.kharkiv-boxes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.kharkiv-box {
+  padding: 36px 32px;
+  background: rgba(12, 12, 15, 0.9);
+  border: 1px solid var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.kharkiv-box.red-box {
+  border-color: var(--accent-red);
+}
+
+.kharkiv-box-header {
+  text-align: center;
+  border-bottom: 1px solid var(--border-line);
+  padding-bottom: 16px;
+}
+
+.kharkiv-box.red-box .kharkiv-box-header {
+  border-bottom-color: var(--accent-red);
+}
+
+.kharkiv-box-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.kharkiv-box.red-box .kharkiv-box-header h3 {
+  color: var(--accent-red);
+}
+
+.kharkiv-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.83rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.kharkiv-meta-label {
+  color: var(--accent-red);
+  font-weight: 700;
+  font-size: 0.74rem;
+}
+
+/* ==========================================================================
+   9. VIDEOS, CLIENTES Y MEDIOS DE PAGO
+   ========================================================================== */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.video-card {
+  border: 1px solid var(--border-line);
+  background: var(--bg-card);
+}
+
+.video-card video {
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+}
+
+.video-caption {
+  padding: 14px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.client-card {
+  border: 1px solid var(--border-line);
+  background: var(--bg-card);
+}
+
+.client-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  filter: grayscale(35%);
+  transition: var(--transition);
+}
+
+.client-card:hover img {
+  filter: grayscale(0%);
+}
+
+.client-card p {
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  color: var(--text-gray);
+  text-align: center;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.review-card {
+  border: 1px solid var(--border-line);
+  background: var(--bg-card);
+  padding: 26px;
+}
+
+.review-stars {
+  color: var(--accent-red);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-size: 0.9rem;
+  color: #d4d4d8;
+  margin-bottom: 14px;
+}
+
+.review-author {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.review-location {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-gray);
+}
+
+.payments-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.payment-card {
+  border: 1px solid var(--border-line);
+  background: var(--bg-card);
+  padding: 24px 18px;
+  transition: var(--transition);
+}
+
+.payment-card:hover {
+  border-color: var(--text-white);
+}
+
+.payment-icon {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.payment-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.payment-card p {
+  font-size: 0.82rem;
+  color: var(--text-gray);
+}
+
+/* ==========================================================================
+   10. CIERRE ESTILO EMPIRE (Referente: galeria de fotos.jpg parte inferior)
+   ========================================================================== */
+.empire-footer {
+  position: relative;
+  padding: 90px 0 40px;
+  background:
+    linear-gradient(180deg, rgba(5, 5, 6, 0.96) 0%, rgba(5, 5, 6, 0.88) 100%),
+    url('img/studio-interior.png') center/cover no-repeat;
+}
+
+.empire-center-box {
+  max-width: 440px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.empire-center-box img {
+  height: 82px;
+  margin: 0 auto 10px;
+}
+
+.empire-sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-gray);
+  margin-bottom: 32px;
+}
+
+.empire-pill-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empire-pill-outline {
+  display: block;
+  padding: 15px 24px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong);
+  background: rgba(10, 10, 14, 0.75);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.00em;
+  line-height: 1.5;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  color: var(--text-white);
+  transition: var(--transition);
+}
+
+.empire-pill-outline:hover {
+  border-color: var(--text-white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.empire-pill-solid {
+  display: block;
+  padding: 16px 24px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #050506;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.00em;
+  line-height: 1.5;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.empire-pill-solid:hover {
+  background: var(--accent-red);
+  color: #ffffff;
+}
+
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-line);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-gray);
+  text-transform: uppercase;
+}
+
+/* Botón flotante y Lightbox */
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 999;
+  background: #ffffff;
+  color: #050506;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.00em;
+  line-height: 1.5;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 13px 20px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75);
+  transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+  color: #ffffff;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.94);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-height: 88vh;
+  max-width: 92vw;
+  border: 1px solid var(--border-strong);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLETS Y CELULARES)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .staggered-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio-item:nth-child(6n + 1),
+  .portfolio-item:nth-child(6n + 6) {
+    grid-column: span 2;
+  }
+  .about-trio-cards,
+  .piercing-editorial-grid,
+  .kharkiv-boxes-grid,
+  .editorial-split-head {
+    grid-template-columns: 1fr;
+  }
+  .about-card-glass {
+    margin: -10px 0;
+  }
+  .payments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .videos-grid,
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    background: #08080a;
+    flex-direction: column;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-line);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .menu-toggle {
+    display: inline-block;
+  }
+  .hero-bottom-row {
+    grid-template-columns: 1fr;
+  }
+  .hero-see-work {
+    justify-self: start;
+  }
+  .staggered-services-grid,
+  .bento-portfolio-grid,
+  .payments-grid {
+    grid-template-columns: 1fr;
+  }
+  .staggered-card:nth-child(even) {
+    margin-top: 0;
+  }
+  .portfolio-item:nth-child(6n + 1),
+  .portfolio-item:nth-child(6n + 6) {
+    grid-column: span 1;
+  }
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ==========================================================================
+   ESTILOS DE ICONOS SVG EN BOTONES Y LISTAS
+   ========================================================================== */
+.btn-icon,
+.meta-icon,
+.icon-svg {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.btn-square-white .btn-icon {
+  filter: brightness(0);
+  margin-right: 8px;
+}
+
+.btn-square-white:hover .btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+.btn-square-outline .btn-icon {
+  filter: brightness(0) invert(1);
+  margin-right: 8px;
+}
+
+#navCtaWhatsapp .btn-icon {
+  width: 11px;
+  height: 11px;
+  margin-right: 6px;
+  filter: brightness(0);
+}
+
+#navCtaWhatsapp:hover .btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+.whatsapp-float .btn-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  filter: brightness(0);
+}
+
+.whatsapp-float:hover .btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+.empire-pill-outline .btn-icon {
+  filter: brightness(0) invert(1);
+  margin-right: 10px;
+}
+
+.empire-pill-solid .btn-icon {
+  filter: brightness(0);
+  margin-right: 10px;
+}
+
+.empire-pill-solid:hover .btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+.icon-white {
+  filter: brightness(0) invert(1) !important;
+}
+
+.kharkiv-meta-label {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-red);
+  font-weight: 700;
+  font-size: 0.74rem;
+}
+
+.kharkiv-meta-label .meta-icon {
+  width: 14px;
+  height: 14px;
+  filter: invert(34%) sepia(85%) saturate(2250%) hue-rotate(345deg) brightness(95%) contrast(92%);
+}
+
+.piercing-checklist li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.piercing-checklist li::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 12px;
+  background: url('Icon/modalidad.svg') no-repeat center/contain;
+  filter: invert(34%) sepia(85%) saturate(2250%) hue-rotate(345deg) brightness(95%) contrast(92%);
+  flex-shrink: 0;
+}
