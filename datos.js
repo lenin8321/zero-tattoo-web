@@ -332,7 +332,7 @@ const CONFIG_ZERO = {
       piercingCheck3: "Asesoría anatómica y seguimiento post-procedimiento",
       piercingBtn: "Cotizar Piercing o Joyería",
       historiaTag: "23+ AÑOS DE ARTE Y CULTURA",
-      historiaTitulo: "NUESTRA TRAYECTORIA E HISTORIA",
+      historiaTitulo: "QUIENES SOMOS",
       historiaTexto: "Con más de 23 años de trayectoria, Zero Tattoo ha construido una historia alrededor del arte, la creatividad y la expresión personal. A lo largo de los años, hemos evolucionado para ofrecer una experiencia integral que reúne tatuajes, piercing, joyería premium y cultura urbana, manteniendo nuestra pasión por el arte y el compromiso con cada cliente. Hoy seguimos creciendo, conectando culturas y llevando el estilo Zero a nuevos destinos.",
       stat1Num: "23+",
       stat1Label: "Años de Trayectoria",
