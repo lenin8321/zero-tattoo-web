@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiénes Somos | ZERO TATTOO COLOMBIA</title>
+  <meta name="description" content="Conoce Zero Tattoo Colombia: más de 23 años de arte, tatuajes, body piercing y joyería con esmeraldas colombianas. Walk-ins todos los días." />
+  <meta name="theme-color" content="#050506" />
+
+  <!-- Icono de la pestaña del navegador -->
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="apple-touch-icon" href="img/logo.png" />
+
+  <!-- Vista previa al compartir el enlace (WhatsApp, Instagram, Facebook).
+       Cuando tengas el dominio, cambia "img/banner_principal.jpg" por la URL completa,
+       por ejemplo: https://www.tudominio.com/img/banner_principal.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:site_name" content="Zero Tattoo Colombia" />
+  <meta property="og:title" content="Quiénes Somos | ZERO TATTOO COLOMBIA" />
+  <meta property="og:description" content="Conoce Zero Tattoo Colombia: más de 23 años de arte, tatuajes, body piercing y joyería con esmeraldas colombianas. Walk-ins todos los días." />
+  <meta property="og:image" content="img/banner_principal.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="Boldonse/Boldonse-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-interna">
+
+  <!-- ========================================================================
+       INTRO PRELOADER DE BIENVENIDA (Minimalista: Solo Logo + Curtain Split)
+       ======================================================================== -->
+  <div 
+    class="luxury-preloader" 
+    id="luxuryPreloader" 
+    aria-label="Cargando experiencia Zero Tattoo"
+  >
+    <div class="preloader-curtain curtain-top" aria-hidden="true"></div>
+    <div class="preloader-curtain curtain-bottom" aria-hidden="true"></div>
+
+    <div class="preloader-content" id="preloaderContent">
+      <div class="preloader-logo-wrapper">
+        <img 
+          src="img/logo.png" 
+          alt="Zero Tattoo Logo" 
+          class="preloader-logo" 
+          id="preloaderLogo" 
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       1. BARRA DE NAVEGACIÓN MINIMALISTA (Ref: banner principal.jpg & tipofrafia.jpg)
+       ======================================================================== -->
+  <header class="navbar" id="mainNavbar">
+    <div class="container nav-inner">
+      <!-- 2. Botón de menú al lado izquierdo con Icon/menu.svg -->
+      <div class="nav-left">
+        <button 
+          type="button" 
+          class="luxury-menu-pill" 
+          id="luxuryMenuToggle" 
+          aria-expanded="false" 
+          aria-controls="luxuryMenuOverlay" 
+          aria-label="Abrir menú de navegación"
+        >
+          <img src="Icon/menu.svg" class="menu-pill-icon" alt="" />
+          <span class="luxury-pill-text" id="luxuryMenuText">MENU</span>
+        </button>
+      </div>
+
+      <!-- 1. Logo Central -->
+      <div class="nav-center">
+        <a href="index.html" class="nav-logo" aria-label="Zero Tattoo Inicio">
+          <img src="img/logo.png" alt="Zero Tattoo Logo" />
+        </a>
+      </div>
+
+      <!-- Lado derecho: Idioma ES/EN y Botón Agendar -->
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Selector de idioma">
+          <button type="button" class="lang-btn active" id="btnLangEs" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="lang-btn" id="btnLangEn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <a href="index.html#contacto" class="btn-square-white" id="navCtaWhatsapp">
+          <img src="Icon/agenda.svg" class="btn-icon" alt="" />
+          <span data-i18n="navCotizar">AGENDAR</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay a Pantalla Completa (Dark Luxury) -->
+  <div 
+    class="luxury-menu-overlay" 
+    id="luxuryMenuOverlay" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-hidden="true"
+    aria-label="Menú principal de navegación"
+  >
+    <div class="luxury-menu-container">
+      <div class="luxury-menu-header">
+        <button type="button" class="luxury-close-btn" id="luxuryMenuCloseBtn" aria-label="Cerrar menú">
+          &times;
+        </button>
+      </div>
+
+      <nav class="luxury-menu-nav" aria-label="Navegación principal del menú">
+        <ul class="luxury-nav-list" id="luxuryNavList">
+          <li class="luxury-nav-item">
+            <a href="portafolio.html" class="luxury-nav-link" data-i18n="navPortafolio">PORTAFOLIO</a>
+            <span class="luxury-nav-num">/01</span>
+          </li>
+          <li class="luxury-nav-item">
+            <a href="nosotros.html" class="luxury-nav-link" data-i18n="navNosotros">NOSOTROS</a>
+            <span class="luxury-nav-num">/02</span>
+          </li>
+          <li class="luxury-nav-item">
+            <a href="index.html#servicios" class="luxury-nav-link" data-i18n="navServicios">SERVICIOS</a>
+            <span class="luxury-nav-num">/03</span>
+          </li>
+          <li class="luxury-nav-item">
+            <a href="index.html#contacto" class="luxury-nav-link" data-i18n="navContacto">SEDES Y HORARIOS</a>
+            <span class="luxury-nav-num">/04</span>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="luxury-menu-footer">
+        <div class="luxury-footer-col social-col">
+          <div class="luxury-footer-links">
+            <a href="https://www.instagram.com/zerotattoocolombia/" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="Icon/instagram.svg" class="luxury-social-icon" alt="Instagram" />
+            </a>
+            <a href="https://linktr.ee/Zerotattoocol" target="_blank" rel="noopener" aria-label="Linktree">
+              <img src="Icon/linktree.svg" class="luxury-social-icon" alt="Linktree" />
+            </a>
+            <a href="https://wa.me/573163589534" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <img src="Icon/whatsapp.svg" class="luxury-social-icon" alt="WhatsApp" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+  <!-- ========================================================================
+       BANNER HERO — QUIÉNES SOMOS
+       ======================================================================== -->
+  <section class="nosotros-hero-banner" id="banner-nosotros">
+    <div class="nosotros-banner-bg" aria-hidden="true">
+      <img src="img/banner_nosotros_principal.jpg" alt="Estudio Zero Tattoo" />
+      <div class="nosotros-banner-overlay"></div>
+    </div>
+    <div class="container nosotros-hero-container">
+      <div class="nosotros-hero-content">
+        <h1 class="nosotros-hero-title" data-i18n="historiaTitulo">NOSOTROS</h1>
+        <p class="nosotros-hero-subtitle" data-i18n="walkinTitulo">
+          TATTOO WALK-INS · ¡No necesitas cita para tatuarte!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       GALERÍA PARALLAX ASIMÉTRICA (DARK LUXURY EDITORIAL)
+       Multi-Speed Parallax · Micro-interacciones · Aceleración GPU
+       ======================================================================== -->
+  <section class="section-editorial asymmetric-parallax-section" id="nosotros">
+    <div class="container">
+      <!-- Encabezado Editorial de Sección -->
+      <div class="editorial-split-head gallery-intro-head">
+        <div>
+          <h2 class="display-heading gallery-display-heading">
+            <span class="indent-line scroll-scrub-text">23 Años de experiencia</span>
+          </h2>
+        </div>
+        <p class="editorial-lead gallery-lead-text">
+          Más de 23 años compartiendo arte corporal, piezas únicas y confianza con nuestra comunidad en Medellín y Bogotá.
+        </p>
+      </div>
+
+      <!-- Contenedor de la Galería Parallax Asimétrica -->
+      <div class="asymmetric-gallery-wrap" id="asymmetricGalleryContainer" aria-label="Galería visual de Zero Tattoo">
+        <div class="asymmetric-gallery-grid" id="asymmetricGalleryGrid">
+          <!-- Las tarjetas y columnas son renderizadas dinámicamente desde GALLERY_ITEMS en galeria-parallax.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE CON LLAMADO A LA ACCIÓN -->
+  <section class="section-editorial page-cta">
+    <div class="container page-cta-inner">
+      <h2 class="display-heading" data-i18n="ctaTitulo">¿LISTO PARA TU PRÓXIMA PIEZA?</h2>
+      <p class="editorial-lead" data-i18n="ctaTexto">Escríbenos por WhatsApp o visítanos sin cita en Medellín o Bogotá.</p>
+      <div class="hero-center-cta">
+        <a href="index.html#contacto" class="btn-square-white" id="ctaBtnWa">
+          <img src="Icon/whatsapp.svg" class="btn-icon" alt="" />
+          <span data-i18n="heroBtnPrimario">Cotizar por WhatsApp</span> <span aria-hidden="true">↗</span>
+        </a>
+        <a href="index.html#contacto" class="btn-square-outline" data-i18n="ctaBtnSedes">Ver Sedes y Horarios</a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ========================================================================
+       7. CIERRE ESTILO EMPIRE (Ref: galeria de fotos.jpg parte inferior)
+       ======================================================================== -->
+  <footer class="empire-footer">
+    <div class="container">
+      <div class="empire-center-box">
+        <img src="img/logo.png" alt="Zero Tattoo Logo" loading="lazy" decoding="async" />
+        <div class="empire-sub">TATTOO · PIERCING · LUXURY JEWELRY · SMOKE SHOP · VAPE</div>
+
+        <div class="empire-pill-stack">
+          <a href="https://www.instagram.com/zerotattoocolombia/" class="empire-pill-outline" id="footerIgLink" target="_blank" rel="noopener" aria-label="Instagram @zerotattoocolombia">
+            <img src="Icon/instagram.svg" class="btn-icon icon-white" alt="" />
+          </a>
+          <a href="https://linktr.ee/Zerotattoocol" class="empire-pill-outline" id="footerLinktreeLink" target="_blank" rel="noopener" aria-label="Linktree @Zerotattoocol">
+            <img src="Icon/linktree.svg" class="btn-icon icon-white" alt="" />
+          </a>
+          <a href="index.html#contacto" class="empire-pill-solid" id="footerWaBtn" aria-label="WhatsApp Zero Tattoo">
+            <img src="Icon/whatsapp.svg" class="btn-icon" alt="" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span data-i18n="footerDerechos">© 2026 Zero Tattoo Colombia. Todos los derechos reservados.</span>
+        <span>MEDELLÍN &amp; BOGOTÁ</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="index.html#contacto" class="whatsapp-float" id="floatWaBtn" aria-label="Chatear por WhatsApp">
+    <img src="Icon/whatsapp.svg" class="btn-icon" alt="" />
+    <span>WHATSAPP <span aria-hidden="true">↗</span></span>
+  </a>
+
+  <!-- Visor Lightbox para ampliar imágenes -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada" aria-hidden="true">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar">&times;</button>
+    <img id="lightboxImg" src="data:," alt="Vista ampliada Zero Tattoo" />
+  </div>
+
+  <script src="datos.js"></script>
+  <script src="script.js"></script>
+  <script src="galeria-parallax.js"></script>
+</body>
+</html>

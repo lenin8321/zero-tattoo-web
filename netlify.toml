@@ -1,0 +1,45 @@
+"$schema" = "https://open-api.netlify.com/netlify.schema.json"
+
+[build]
+  publish = "."
+
+# URLs limpias sin extensión .html
+[[redirects]]
+  from = "/nosotros"
+  to = "/nosotros.html"
+  status = 200
+
+[[redirects]]
+  from = "/portafolio"
+  to = "/portafolio.html"
+  status = 200
+
+# Encabezados de seguridad globales
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Caché óptima para fuentes tipográficas
+[[headers]]
+  for = "/Boldonse/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Caché para imágenes y medios
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/Icon/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/Banner/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"

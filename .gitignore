@@ -3,3 +3,10 @@
 Thumbs.db
 .idea/
 .vscode/
+
+# Herramientas locales y secretos (no subir al hosting ni a Git)
+editar.js
+.env
+node_modules/
+_originales_img/
+.netlify/

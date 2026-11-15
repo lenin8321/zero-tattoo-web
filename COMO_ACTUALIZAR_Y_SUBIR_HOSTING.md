@@ -13,7 +13,10 @@ Dentro de tu carpeta `Zero Tatto` encontrarás todo organizado así:
 * `datos.js` → **El archivo más importante para ti.** Aquí están todos los textos (ES / EN), horarios, teléfonos, fotos del portafolio, fotos de clientes, videos y medios de pago.
 * `styles.css` → Contiene los colores (negro profundo, dorado, verde esmeralda) y el diseño adaptable a celulares.
 * `script.js` → Hace funcionar el botón de cambio de idioma **ES / EN**, el filtro de estilos de tatuajes y el visor de fotos en pantalla completa.
-* `img/` → Carpeta donde están el logotipo (`logo.png`), el piercing con esmeraldas (`piercing-esmeraldas.png`), las fotos de tatuajes (`tattoo-1.png` a `tattoo-12.jpg`) y las fotos de clientes (`cliente-1.png` a `cliente-6.jpg`).
+* `img/` → Carpeta donde están el logotipo (`logo.png`), el piercing con esmeraldas (`piercing-esmeraldas.jpg`), las fotos de tatuajes (`tattoo-1.jpg` a `tattoo-12.jpg`) y las fotos de clientes (`cliente-1.jpg` a `cliente-6.jpg`).
+  * **Importante:** antes de subir una foto nueva, redúcela a unos 1800 px de lado y guárdala en JPG (idealmente menos de 400 KB). Puedes usar https://squoosh.app gratis. Las fotos directas del celular pesan entre 2 y 5 MB y vuelven lenta la página.
+* `_originales_img/` → Copia de seguridad de las fotos originales en alta resolución. **No subas esta carpeta al hosting.**
+* `editar.js` → Herramienta local. **No la subas al hosting.**
 * `video/` → Carpeta donde están los videos en `.mp4` (`video-1.mp4` a `video-3.mp4`).
 
 ---

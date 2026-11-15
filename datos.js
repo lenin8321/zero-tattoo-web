@@ -82,7 +82,7 @@ const CONFIG_ZERO = {
       tituloEn: "Crescent Moon Hannya Mask"
     },
     {
-      imagen: "img/tattoo-1.png",
+      imagen: "img/tattoo-1.jpg",
       categoria: "realismo-color",
       estiloEs: "Realismo Color & Cómic",
       estiloEn: "Color Realism & Comic Pop",
@@ -90,7 +90,7 @@ const CONFIG_ZERO = {
       tituloEn: "Full Color Pop Art “BOOM!”"
     },
     {
-      imagen: "img/tattoo-2.png",
+      imagen: "img/tattoo-2.jpg",
       categoria: "realismo-sombra",
       estiloEs: "Realismo Sombra",
       estiloEn: "Black & Grey Realism",
@@ -106,7 +106,7 @@ const CONFIG_ZERO = {
       tituloEn: "Oriental Hannya Sun"
     },
     {
-      imagen: "img/tattoo-3.png",
+      imagen: "img/tattoo-3.jpg",
       categoria: "fine-line",
       estiloEs: "Fine Line & Botánico",
       estiloEn: "Fine Line & Botanical",
@@ -158,17 +158,17 @@ const CONFIG_ZERO = {
   // 4. GALERÍA DE CLIENTES Y EXPERIENCIA EN EL ESTUDIO
   galeriaClientes: [
     {
-      imagen: "img/cliente-1.png",
+      imagen: "img/cliente-1.jpg",
       tituloEs: "Tatuajes en Pareja · Provenza",
       tituloEn: "Couple Tattoos · Provenza"
     },
     {
-      imagen: "img/cliente-2.png",
+      imagen: "img/cliente-2.jpg",
       tituloEs: "Amigas en Sesión · Zero Tattoo",
       tituloEn: "Friends Tattoo Session · Zero Tattoo"
     },
     {
-      imagen: "img/cliente-3.png",
+      imagen: "img/cliente-3.jpg",
       tituloEs: "Experiencia Walk-In con Amigos",
       tituloEn: "Walk-In Experience with Friends"
     },
@@ -193,19 +193,19 @@ const CONFIG_ZERO = {
   videosEstudio: [
     {
       archivo: "video/video-1.mp4",
-      poster: "img/studio-interior.png",
+      poster: "img/studio-interior.jpg",
       tituloEs: "Sesión en Vivo · Precisión y Bioseguridad",
       tituloEn: "Live Session · Precision & Biosafety"
     },
     {
       archivo: "video/video-2.mp4",
-      poster: "img/studio-shadows.png",
+      poster: "img/studio-shadows.jpg",
       tituloEs: "Arte en la Piel · Proceso Creativo",
       tituloEn: "Art on Skin · Creative Process"
     },
     {
       archivo: "video/video-3.mp4",
-      poster: "img/hero-studio.png",
+      poster: "img/hero-studio.jpg",
       tituloEs: "Ambiente Zero Tattoo · Cultura Urbana",
       tituloEn: "Zero Tattoo Vibe · Urban Culture"
     }
@@ -242,35 +242,35 @@ const CONFIG_ZERO = {
   // 7. TODOS LOS MEDIOS DE PAGO DISPONIBLES
   mediosDePago: [
     {
-      icono: "💳",
+      icono: "Icon/tarjeta-de-credito.svg",
       tituloEs: "Tarjetas Débito y Crédito",
       tituloEn: "Credit & Debit Cards",
       detalleEs: "Visa, Mastercard, American Express, Codensa y Diners Club (Pagos sin contacto / Contactless)",
       detalleEn: "Visa, Mastercard, American Express & Diners Club (Contactless / Tap to Pay)"
     },
     {
-      icono: "📲",
+      icono: "Icon/billeteras-digitales.svg",
       tituloEs: "Billeteras Digitales Colombia",
       tituloEn: "Colombian Digital Wallets",
       detalleEs: "Nequi, Daviplata, Dale!, Movii y Transfiya al instante",
       detalleEn: "Instant transfers via Nequi, Daviplata, Dale! & Transfiya"
     },
     {
-      icono: "🏦",
+      icono: "Icon/transferencias-bancarias.svg",
       tituloEs: "Transferencias Bancarias y PSE",
       tituloEn: "Bank Transfers & QR Code",
       detalleEs: "Transferencia directa Bancolombia, Código QR Bancolombia y PSE",
       detalleEn: "Direct Bancolombia transfer, Bancolombia QR Code & PSE"
     },
     {
-      icono: "💵",
+      icono: "Icon/dinero-en-efectivo.svg",
       tituloEs: "Efectivo Nacional y Divisas",
       tituloEn: "Cash (COP, USD & EUR)",
       detalleEs: "Pesos Colombianos (COP), Dólares (USD) y Euros (EUR) en nuestras sedes",
       detalleEn: "Colombian Pesos (COP), US Dollars (USD) & Euros (EUR) accepted in-studio"
     },
     {
-      icono: "🌍",
+      icono: "Icon/pago-internacional.svg",
       tituloEs: "Pagos Internacionales y Wallets",
       tituloEn: "International & Mobile Pay",
       detalleEs: "Apple Pay, Google Pay, enlaces de pago internacional y transferencias para turistas",
@@ -285,11 +285,12 @@ const CONFIG_ZERO = {
       navPortafolio: "PORTAFOLIO",
       navNosotros: "NOSOTROS",
       navPrecios: "PRECIOS",
-      navContacto: "CONTACTO",
-      navPagos: "PAGOS",
+      navContacto: "SEDES Y HORARIOS",
+      navPagos: "MEDIOS DE PAGO",
       navCotizar: "AGENDAR",
       navEstilos: "PORTAFOLIO",
-      navPiercing: "Piercing & Joyería",
+      navPiercing: "BODY PIERCING",
+      navVideos: "VIDEOS & SESIONES",
       navHistoria: "NOSOTROS",
       navSedes: "CONTACTO",
       heroBadge: "MÁS DE 23 AÑOS DE TRAYECTORIA · MEDELLÍN & BOGOTÁ",
@@ -303,7 +304,7 @@ const CONFIG_ZERO = {
       walkinBtn: "Visitar Sede o Escribir Ahora",
       serviciosTag: "EXPERIENCIA INTEGRAL ZERO",
       serviciosTitulo: "NUESTROS SERVICIOS",
-      serviciosIntro: "Cinco líneas especializadas bajo un mismo sello de calidad, bioseguridad y cultura urbana.",
+      serviciosIntro: "Tattoo, piercing, joyería, Smoke Shop y Vape bajo un mismo sello de calidad, bioseguridad y cultura urbana.",
       srv1Titulo: "Tattoo Personalizado",
       srv1Desc: "Cada tatuaje comienza con una asesoría personalizada para definir el diseño, la ubicación y los detalles de cada pieza con protocolos estrictos de higiene y bioseguridad.",
       srv2Titulo: "Body Piercing Profesional",
@@ -332,7 +333,7 @@ const CONFIG_ZERO = {
       piercingCheck3: "Asesoría anatómica y seguimiento post-procedimiento",
       piercingBtn: "Cotizar Piercing o Joyería",
       historiaTag: "23+ AÑOS DE ARTE Y CULTURA",
-      historiaTitulo: "QUIENES SOMOS",
+      historiaTitulo: "NOSOTROS",
       historiaTexto: "Con más de 23 años de trayectoria, Zero Tattoo ha construido una historia alrededor del arte, la creatividad y la expresión personal. A lo largo de los años, hemos evolucionado para ofrecer una experiencia integral que reúne tatuajes, piercing, joyería premium y cultura urbana, manteniendo nuestra pasión por el arte y el compromiso con cada cliente. Hoy seguimos creciendo, conectando culturas y llevando el estilo Zero a nuevos destinos.",
       stat1Num: "23+",
       stat1Label: "Años de Trayectoria",
@@ -357,18 +358,46 @@ const CONFIG_ZERO = {
       pagosTitulo: "TODOS LOS MEDIOS DE PAGO",
       pagosIntro: "Para tu comodidad, recibimos todos los métodos de pago nacionales e internacionales en nuestras sedes de Medellín y Bogotá.",
       footerTexto: "Arte, expresión personal, joyería con esmeraldas colombianas y cultura urbana con más de 23 años de historia.",
-      footerDerechos: "© 2026 Zero Tattoo Colombia. Todos los derechos reservados."
+      footerDerechos: "© 2026 Zero Tattoo Colombia. Todos los derechos reservados.",
+      footerWaBtn: "AGENDAR / WALK-IN WHATSAPP",
+      heroBtnLinktree: "Linktree Oficial",
+      aboutCard1Titulo: "01. Atención Sin Cita (Walk-Ins)",
+      aboutCard2Titulo: "02. 23+ Años de Arte & Precisión",
+      aboutCard3Titulo: "03. Joyería & Esmeraldas",
+      aboutCardFoot: "Bioseguridad y calidad garantizada en cada sesión",
+      piercingEmeraldTag: "💎 ESMERALDAS COLOMBIANAS · GRADO IMPLANTE",
+      lblDireccion: "DIRECCIÓN",
+      lblHorario: "HORARIO",
+      lblModalidad: "MODALIDAD",
+      txtWalkins: "WALK-INS BIENVENIDOS",
+      ctaTitulo: "¿LISTO PARA TU PRÓXIMA PIEZA?",
+      ctaTexto: "Escríbenos por WhatsApp o visítanos sin cita en Medellín o Bogotá.",
+      ctaBtnSedes: "Ver Sedes y Horarios",
+      vivBtnDirectorio: "Artistas & Obras",
+      vivDirSub: "SELECCIÓN DE PIEZAS DE AUTOR · MEDELLÍN & BOGOTÁ",
+      vivDirCategorias: "DISCIPLINAS / STYLES",
+      vivDirFootNote: "Pasa el cursor sobre cada pieza para previsualizar la obra de autor en tiempo real.",
+      vivHeroSub: "Curaduría de obras corporales concebidas bajo estándares de alta precisión anatómica, esterilidad médica y devoción por la cultura visual urbana.",
+      vivManifestoLocation: "MEDELLÍN (PROVENZA) & BOGOTÁ (20 DE JULIO)",
+      vivColeccionTitulo: "OBRAS RECIENTES & PROYECTOS",
+      vivColeccionDesc: "Explora nuestra producción de autor organizada por disciplinas. Haz clic sobre cualquier pieza para ampliarla en alta definición.",
+      vivModoEditorial: "Editorial",
+      vivModoGrid: "Grid Regular",
+      vivFooterBio: "Estudio contemporáneo con más de 23 años de trayectoria. Tatuajes de autor, body piercing estéril, alta joyería con esmeraldas y cultura urbana de clase mundial.",
+      vivFooterDisc: "DISCIPLINAS",
+      vivFooterStudios: "STUDIOS & WALK-INS"
     },
     en: {
       navServicios: "SERVICES",
       navPortafolio: "PORTFOLIO",
       navNosotros: "ABOUT US",
       navPrecios: "PRICING",
-      navContacto: "CONTACT",
-      navPagos: "PAYMENTS",
+      navContacto: "LOCATIONS & HOURS",
+      navPagos: "PAYMENT METHODS",
       navCotizar: "BOOK",
       navEstilos: "PORTFOLIO",
-      navPiercing: "Piercing & Jewelry",
+      navPiercing: "BODY PIERCING",
+      navVideos: "VIDEOS & SESSIONS",
       navHistoria: "ABOUT US",
       navSedes: "CONTACT",
       heroBadge: "OVER 23 YEARS OF EXPERIENCE · MEDELLÍN & BOGOTÁ",
@@ -382,7 +411,7 @@ const CONFIG_ZERO = {
       walkinBtn: "Visit Us or Message Now",
       serviciosTag: "COMPLETE ZERO EXPERIENCE",
       serviciosTitulo: "OUR SERVICES",
-      serviciosIntro: "Five specialized lines under one standard of artistic excellence, biosafety, and urban culture.",
+      serviciosIntro: "Tattoo, piercing, jewelry, Smoke Shop and Vape under one standard of artistic excellence, biosafety, and urban culture.",
       srv1Titulo: "Custom Tattoos",
       srv1Desc: "Every tattoo begins with a consultation to define the design, placement, and details of each piece, following strict hygiene and biosafety protocols.",
       srv2Titulo: "Professional Body Piercing",
@@ -411,7 +440,7 @@ const CONFIG_ZERO = {
       piercingCheck3: "Anatomical consultation and dedicated aftercare support",
       piercingBtn: "Inquire About Piercing & Jewelry",
       historiaTag: "23+ YEARS OF ART & CULTURE",
-      historiaTitulo: "OUR STORY & JOURNEY",
+      historiaTitulo: "ABOUT US",
       historiaTexto: "With over 23 years of experience, Zero Tattoo has built its story around art, creativity, and self-expression. Over the years, we have evolved to offer a complete experience combining tattoos, body piercing, premium jewelry, and urban culture, while staying true to our passion for art and commitment to every client. Today, we continue to grow, connect cultures, and bring the Zero style to new destinations.",
       stat1Num: "23+",
       stat1Label: "Years of Experience",
@@ -436,7 +465,34 @@ const CONFIG_ZERO = {
       pagosTitulo: "ALL PAYMENT METHODS ACCEPTED",
       pagosIntro: "For your convenience, we accept all local and international payment methods at our Medellín and Bogotá studios.",
       footerTexto: "Art, self-expression, Colombian emerald jewelry, and urban culture with over 23 years of history.",
-      footerDerechos: "© 2026 Zero Tattoo Colombia. All rights reserved."
+      footerDerechos: "© 2026 Zero Tattoo Colombia. All rights reserved.",
+      footerWaBtn: "BOOK / WALK-IN WHATSAPP",
+      heroBtnLinktree: "Official Linktree",
+      aboutCard1Titulo: "01. Walk-Ins Welcome",
+      aboutCard2Titulo: "02. 23+ Years of Art & Precision",
+      aboutCard3Titulo: "03. Jewelry & Emeralds",
+      aboutCardFoot: "Guaranteed biosafety and quality in every session",
+      piercingEmeraldTag: "💎 COLOMBIAN EMERALDS · IMPLANT GRADE",
+      lblDireccion: "ADDRESS",
+      lblHorario: "OPENING HOURS",
+      lblModalidad: "WALK-INS",
+      txtWalkins: "WALK-INS WELCOME",
+      ctaTitulo: "READY FOR YOUR NEXT PIECE?",
+      ctaTexto: "Message us on WhatsApp or walk in at our Medellín or Bogotá studios.",
+      ctaBtnSedes: "See Locations & Hours",
+      vivBtnDirectorio: "Artists & Works",
+      vivDirSub: "CURATED ART ARCHIVE · MEDELLÍN & BOGOTÁ",
+      vivDirCategorias: "DISCIPLINAS / STYLES",
+      vivDirFootNote: "Hover over each piece to view live artwork preview.",
+      vivHeroSub: "Curated body art executed with high anatomical precision, hospital-grade sterility, and deep devotion to urban visual culture.",
+      vivManifestoLocation: "MEDELLÍN (PROVENZA) & BOGOTÁ (20 DE JULIO)",
+      vivColeccionTitulo: "RECENT WORKS & PROJECTS",
+      vivColeccionDesc: "Explore our archive organized by discipline. Click on any work to inspect in high resolution.",
+      vivModoEditorial: "Editorial",
+      vivModoGrid: "Regular Grid",
+      vivFooterBio: "Contemporary studio with over 23 years of history. Custom tattoos, sterile body piercing, high jewelry with Colombian emeralds and world-class urban culture.",
+      vivFooterDisc: "DISCIPLINES",
+      vivFooterStudios: "STUDIOS & WALK-INS"
     }
   }
 };
